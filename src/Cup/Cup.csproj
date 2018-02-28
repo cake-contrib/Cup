@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <NoWarn>NU1701</NoWarn>
+    <AssemblyName>Cup</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
+    <PackageReference Include="libgit2sharp" Version="0.24.0" />
+    <PackageReference Include="octokit" Version="0.29.0" />
+    <PackageReference Include="spectre.commandline" Version="0.10.0-alpha0001" />
+    <PackageReference Include="spectre.system" Version="0.7.0" />
+  </ItemGroup>
+
+  <!-- Static analysis -->
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>../Spectre.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="../stylecop.json" Link="stylecop.json" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Analyzers" Version="1.6.0">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
