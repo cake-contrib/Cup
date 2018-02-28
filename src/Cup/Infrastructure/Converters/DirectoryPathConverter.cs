@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Globalization;
 using Spectre.System.IO;
 
-namespace Cup.Utils
+namespace Cup.Infrastructure.Converters
 {
     internal sealed class DirectoryPathConverter : TypeConverter
     {

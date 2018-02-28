@@ -1,9 +1,8 @@
-﻿using System;
-using Cup.Diagnostics;
+﻿using Cup.Infrastructure.Diagnostics;
 using Spectre.System;
 using Spectre.System.IO;
 
-namespace Cup.Processing
+namespace Cup.Commands.Update.Processing
 {
     public class RepositoryProcessor
     {

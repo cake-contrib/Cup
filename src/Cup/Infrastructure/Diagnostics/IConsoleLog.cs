@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cup.Diagnostics
+namespace Cup.Infrastructure.Diagnostics
 {
     public interface IConsoleLog : IDisposable
     {

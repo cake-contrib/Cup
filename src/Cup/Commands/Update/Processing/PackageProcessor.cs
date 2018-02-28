@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Cup.Diagnostics;
-using Cup.Utils;
+using Cup.Infrastructure.Diagnostics;
 using Spectre.System;
 using Spectre.System.IO;
 
-namespace Cup.Processing
+namespace Cup.Commands.Update.Processing
 {
     public class PackageProcessor
     {
@@ -18,7 +17,7 @@ namespace Cup.Processing
         private readonly IEnvironment _environment;
         private readonly IConsoleLog _log;
         private readonly IGlobber _globber;
-        private readonly NuGetUpdateInvoker _nuget;
+        private readonly NuGetTool _nuget;
 
         public PackageProcessor(IFileSystem fileSystem, IEnvironment environment, IConsoleLog log)
         {
@@ -26,7 +25,7 @@ namespace Cup.Processing
             _environment = environment;
             _log = log;
             _globber = new Globber(fileSystem, environment);
-            _nuget = new NuGetUpdateInvoker(fileSystem);
+            _nuget = new NuGetTool(fileSystem);
         }
 
         public int Process(DirectoryPath root, DirectoryPath repository, string version)

@@ -1,15 +1,15 @@
 using System.Diagnostics;
 using System.Net;
-using Cup.Diagnostics;
+using Cup.Infrastructure.Diagnostics;
 using Spectre.System.IO;
 
-namespace Cup.Utils
+namespace Cup.Commands.Update.Processing
 {
-    public class NuGetUpdateInvoker
+    public class NuGetTool
     {
         private readonly IFileSystem _filesystem;
 
-        public NuGetUpdateInvoker(IFileSystem fileSystem)
+        public NuGetTool(IFileSystem fileSystem)
         {
             _filesystem = fileSystem;
         }

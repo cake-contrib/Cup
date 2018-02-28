@@ -1,10 +1,10 @@
 using System.ComponentModel;
-using Cup.Utils;
+using Cup.Infrastructure.Converters;
 using JetBrains.Annotations;
 using Spectre.CommandLine;
 using Spectre.System.IO;
 
-namespace Cup.Commands
+namespace Cup.Commands.Update
 {
     public class UpdateSettings : GithubSettings
     {

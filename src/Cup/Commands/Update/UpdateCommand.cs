@@ -1,9 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
-using Cup.Diagnostics;
-using Cup.Processing;
-using Cup.Utils;
+using Cup.Commands.Update.Processing;
+using Cup.Infrastructure.Diagnostics;
 using JetBrains.Annotations;
 using LibGit2Sharp;
 using Octokit;
@@ -15,7 +14,7 @@ using GitRepository = LibGit2Sharp.Repository;
 using GitSignature = LibGit2Sharp.Signature;
 using OctokitRepository = Octokit.Repository;
 
-namespace Cup.Commands
+namespace Cup.Commands.Update
 {
     [UsedImplicitly]
     public class UpdateCommand : Command<UpdateSettings>
@@ -168,7 +167,7 @@ namespace Cup.Commands
         private static (string owner, string repository) GetRepositoryInfo(UpdateSettings settings)
         {
             var parts = settings.Repository.Trim().Split('/');
-            var owner = parts?[0]?.Trim();
+            var owner = parts[0]?.Trim();
             if (string.IsNullOrWhiteSpace(owner))
             {
                 throw new InvalidOperationException("Could not parse repository owner.");

@@ -1,7 +1,7 @@
 ﻿using System;
 using JetBrains.Annotations;
 
-namespace Cup.Diagnostics
+namespace Cup.Infrastructure.Diagnostics
 {
     [UsedImplicitly]
     public sealed class ConsoleLog : IConsoleLog
