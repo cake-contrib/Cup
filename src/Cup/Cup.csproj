@@ -12,7 +12,7 @@
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
     <PackageReference Include="libgit2sharp" Version="0.24.0" />
     <PackageReference Include="octokit" Version="0.29.0" />
-    <PackageReference Include="spectre.commandline" Version="0.10.0-alpha0001" />
+    <PackageReference Include="spectre.commandline" Version="0.10.0-alpha0002" />
     <PackageReference Include="spectre.system" Version="0.7.0" />
   </ItemGroup>
 
@@ -25,7 +25,7 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Roslynator.Analyzers" Version="1.6.0">
+    <PackageReference Include="Roslynator.Analyzers" Version="1.7.0">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
